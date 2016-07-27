@@ -1,19 +1,20 @@
 var User = require('../models/user');
 
 module.exports = {
-  index: index,
+  // index: index,  Wait for Admin use
   show: show,
   create: create,
   update: update,
   destroy: destroy
 }
 
-function index(req, res, next) {
-  User.find({}, function(err, users) {
-    if (err) next(err)
-    res.json(users)
-  })
-}
+// Wait for Admin use
+// function index(req, res, next) {
+//   User.find({}, function(err, users) {
+//     if (err) next(err)
+//     res.json(users)
+//   })
+// }
 
 function show(req, res, next) {
   var id = req.params.id
