@@ -9,7 +9,7 @@ router.route('/api/users')
 router.route('/api/users/:id')
   .get(usersController.show)
   .post(usersController.create)
-  .put(usersController.update)
+  .patch(usersController.update)
   .delete(usersController.destroy);
 
   /* GET home page. */
