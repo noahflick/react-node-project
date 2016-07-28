@@ -27004,14 +27004,30 @@
 	var ChatBox = React.createClass({
 	  displayName: 'ChatBox',
 
+	  getInitialState() {
+	    return {};
+	  },
+	  componentDidMount: function () {
+	    $.get("http://localhost:3000/api/users/57991fea0f03556a19998173").then(user => {
+	      this.setState({ name: user.name, currentBalance: user.currentBalance });
+	    });
+	  },
 	  render: function () {
+
 	    return React.createElement(
 	      'div',
 	      null,
 	      React.createElement(
 	        'h1',
 	        null,
-	        'React ChatBox'
+	        'Name: ',
+	        this.state.name
+	      ),
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Current Balance: ',
+	        this.state.currentBalance
 	      )
 	    );
 	  }
