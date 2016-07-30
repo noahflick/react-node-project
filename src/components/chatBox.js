@@ -15,8 +15,8 @@ var ChatBox = React.createClass({
   render: function(){
 
     return(
-      <div><h1>Name: {this.state.name}</h1>
-        <h2>Current Balance: {this.state.currentBalance}</h2>
+      <div><p>Name: {this.state.name}</p>
+        <p>Current Balance: {this.state.currentBalance}</p>
       </div>
     )
   }
